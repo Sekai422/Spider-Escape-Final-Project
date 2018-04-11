@@ -1,4 +1,4 @@
-package code;
+package code.Gui;
 
 import gui_version.interfaces.Constants;
 import javafx.application.Application;

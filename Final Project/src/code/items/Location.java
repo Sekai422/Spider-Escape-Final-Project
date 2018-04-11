@@ -1,4 +1,4 @@
-package code;
+package code.items;
 
 public class Location {
 	double locationX;

@@ -1,7 +1,7 @@
 package test;
 
-import code.Avatar;
-import code.GameScreen;
+import code.items.Avatar;
+import code.Gui.GameScreen;
 import org.junit.Test;
 import javafx.scene.control.Label;
 

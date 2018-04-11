@@ -1,4 +1,4 @@
-package code;
+package code.items;
 
 import gui_version.interfaces.Constants;
 import javafx.scene.image.Image;

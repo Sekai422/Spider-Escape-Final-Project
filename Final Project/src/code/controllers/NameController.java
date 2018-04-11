@@ -1,5 +1,6 @@
-package code;
+package code.controllers;
 
+import code.Gui.GameScreen;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -24,7 +25,7 @@ public class NameController {
 			switch (event.getCode()){
 				case ENTER:
 					window.close();
-					screen.avatar.setName(name.getText().toUpperCase());
+					screen.getAvatar().setName(name.getText().toUpperCase());
 					screen.getFileController().save(screen);
 			}
 		});

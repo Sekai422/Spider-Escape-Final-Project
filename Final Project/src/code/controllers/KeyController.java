@@ -1,5 +1,7 @@
-package code;
+package code.controllers;
 
+import code.items.Avatar;
+import code.Gui.GameScreen;
 import gui_version.interfaces.Constants;
 
 public class KeyController implements Constants {

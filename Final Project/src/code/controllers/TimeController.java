@@ -1,13 +1,16 @@
-package code;
+package code.controllers;
 
+import code.Gui.GameScreen;
+import code.items.Avatar;
+import code.items.Heart;
+import code.items.Spider;
+import code.items.Token;
 import gui_version.interfaces.Constants;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.scene.image.ImageView;
 import javafx.util.Duration;
-
-import java.sql.Time;
 
 public class TimeController implements Constants {
 	Timeline timer;
@@ -31,7 +34,7 @@ public class TimeController implements Constants {
 	public void update(GameScreen gameScreen){
 		this.distance = this.distance + 1;
 		if (distance >= ((windowHeight - objectHeight) / row)) {
-			gameScreen.getArrayListLocations().shuffleLocations();
+			gameScreen.getLocationController().shuffleLocations();
 			gameScreen.setObstaclesImage();
 			gameScreen.setCollectiblesImage();
 			this.distance = 0;
@@ -57,11 +60,11 @@ public class TimeController implements Constants {
 
 					} else if (gameScreen.getTypeClass().get(i - 1) instanceof Token) {
 						avatar.updateScore(((Token) gameScreen.getTypeClass().get(i - 1)).getScore());
-						gameScreen.score.setText("Score: " + avatar.getScore());
+						gameScreen.getScore().setText("Score: " + avatar.getScore());
 
 					}
 					gameScreen.getGameLayout().getChildren().remove(i);
-					gameScreen.typeClass.remove(i - 1);
+					gameScreen.getTypeClass().remove(i - 1);
 				}
 			}
 			/*if (((ImageView) gameScreen.getGameLayout().getChildren().get(i)).getY() >= windowHeight) {

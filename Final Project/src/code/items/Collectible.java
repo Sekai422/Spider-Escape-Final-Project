@@ -1,4 +1,4 @@
-package code;
+package code.items;
 
 import javafx.scene.image.ImageView;
 

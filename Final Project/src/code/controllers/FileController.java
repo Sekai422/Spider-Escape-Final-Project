@@ -1,4 +1,6 @@
-package code;
+package code.controllers;
+
+import code.Gui.GameScreen;
 
 import java.io.*;
 import java.time.LocalDate;
@@ -46,7 +48,7 @@ public class FileController {
 		String date = dtf.format(localDate);
 
 		try {
-			String mycontent = "\n" + gameScreen.avatar.getName()+","+gameScreen.avatar.getScore() +"," + date;
+			String mycontent = "\n" + gameScreen.getAvatar().getName()+","+gameScreen.getAvatar().getScore() +"," + date;
 			//Specify the file name and path here
 			File file = new File("resources\\SavedFile.txt");
 			FileWriter fw = new FileWriter(file, true);
@@ -57,20 +59,13 @@ public class FileController {
 		} catch (IOException ioe) {
 			ioe.printStackTrace();
 		}
-		/*finally
-		{
-			try{
-
-			}catch(Exception ex){
-
-			}
-		}*/
 	}
 
 
 	public void load(){
 
 	}
+
 	public static void main(String[] args){
 		FileController fileController = new FileController();
 		fileController.read();

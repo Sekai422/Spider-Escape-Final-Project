@@ -1,5 +1,12 @@
-package code;
+package code.Gui;
 
+import code.controllers.LocationController;
+import code.items.Location;
+import code.controllers.FileController;
+import code.controllers.KeyController;
+import code.controllers.NameController;
+import code.controllers.TimeController;
+import code.items.*;
 import gui_version.interfaces.Constants;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -22,11 +29,11 @@ public class GameScreen implements Constants {
 	BorderPane baseLayout;
 	int maxObstacleAmount;
 	ArrayList typeClass = new ArrayList();
-	ArrayListLocations arrayListLocations = new ArrayListLocations();
-	ArrayList locations = arrayListLocations.getLocations();
+	LocationController locationController = new LocationController();
+	ArrayList locations = locationController.getLocations();
 	Avatar avatar = new Avatar();
 	Random rand = new Random();
-	TimeController timeController = new TimeController(this, avatar);
+	TimeController timeController = new TimeController(this, this.avatar);
 	KeyController keyController = new KeyController();
 	PauseMenu pauseMenu = new PauseMenu();
 	FileController fileController = new FileController();
@@ -62,7 +69,7 @@ public class GameScreen implements Constants {
 		this.setGameOver();
 		this.setGameLayout();
 		this.setAvatarImage();
-		this.getArrayListLocations().shuffleLocations();
+		this.getLocationController().shuffleLocations();
 		this.setBaseLayout();
 		this.setScene();
 	}
@@ -201,8 +208,8 @@ public class GameScreen implements Constants {
 		return this.typeClass;
 	}
 
-	public ArrayListLocations getArrayListLocations() {
-		return this.arrayListLocations;
+	public LocationController getLocationController() {
+		return this.locationController;
 	}
 
 	public void restart(){
@@ -221,5 +228,9 @@ public class GameScreen implements Constants {
 
 	public NameController getNameController() {
 		return this.nameController;
+	}
+
+	public Avatar getAvatar (){
+		return this.avatar;
 	}
 }

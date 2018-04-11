@@ -1,6 +1,6 @@
 package interfaces;
 
-import code.Avatar;
+import code.items.Avatar;
 
 public interface Objects {
 	public static final Avatar avatar = new Avatar();

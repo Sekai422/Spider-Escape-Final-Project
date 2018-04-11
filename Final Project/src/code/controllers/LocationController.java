@@ -1,14 +1,15 @@
-package code;
+package code.controllers;
 
+import code.items.Location;
 import gui_version.interfaces.Constants;
 
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class ArrayListLocations implements Constants {
+public class LocationController implements Constants {
 	ArrayList locations;
 
-	public ArrayListLocations(){
+	public LocationController(){
 		makeLocations();
 	}
 

@@ -1,6 +1,10 @@
 package interfaces;
 
-import code.*;
+import code.Gui.GameScreen;
+import code.Gui.PauseMenu;
+import code.Gui.StartMenu;
+import code.controllers.TimeController;
+import code.items.Avatar;
 
 public interface Preloader{
 	StartMenu startMenu = new StartMenu();
