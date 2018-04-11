@@ -14,11 +14,13 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
+import javafx.stage.Stage;
 
 import java.util.ArrayList;
 import java.util.Random;
 
 public class GameScreen implements Constants {
+	Stage window;
 	Scene scene;
 	Label health;
 	Label score;
@@ -232,5 +234,20 @@ public class GameScreen implements Constants {
 
 	public Avatar getAvatar (){
 		return this.avatar;
+	}
+
+	public void display(){
+		this.window = new Stage();
+		this.setWindow();
+		this.window.show();
+		this.getTimeController().startTime();
+	}
+
+	public Stage getWindow (){
+		return this.window;
+	}
+
+	public void setWindow(){
+		this.window.setScene(this.getScene());
 	}
 }
