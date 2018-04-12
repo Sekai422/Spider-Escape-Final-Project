@@ -9,8 +9,8 @@ public interface Constants {
 	public static final int row = 3;
 
 	//Objects
-	public static final double objectWidth = 50;
-	public static final double objectHeight = 50;
+	public static final double objectWidth = 100;
+	public static final double objectHeight = 100;
 
 	public static final double opacity = 0.5;
 

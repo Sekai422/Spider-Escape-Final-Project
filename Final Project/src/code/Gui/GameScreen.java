@@ -10,9 +10,9 @@ import code.items.*;
 import gui_version.interfaces.Constants;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.VBox;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.*;
 import javafx.scene.text.Font;
 
 import java.util.ArrayList;
@@ -38,7 +38,9 @@ public class GameScreen implements Constants {
 	PauseMenu pauseMenu = new PauseMenu();
 	FileController fileController = new FileController();
 	NameController nameController = new NameController();
-
+	BackgroundImage myBI= new BackgroundImage(new Image("images/animation.gif",600,700,false,true),
+			BackgroundRepeat.REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT,
+			BackgroundSize.DEFAULT);
 	public PauseMenu getPauseMenu() {
 		return this.pauseMenu;
 	}
@@ -80,7 +82,8 @@ public class GameScreen implements Constants {
 	}
 
 	public void setGameLayout() {
-		this.gameLayout.setStyle("-fx-background-color: gray;");
+
+		this.gameLayout.setBackground(new Background(myBI));
 		this.gameLayout.setPrefWidth(windowWidth);
 		this.gameLayout.setPrefHeight(windowHeight);
 	}
@@ -156,6 +159,7 @@ public class GameScreen implements Constants {
 		avatar.getImage().setY(avatar.getLocation().getLocationY());
 		this.getGameLayout().getChildren().add(avatar.getImage());
 	}
+
 
 	public void setObstaclesImage(){
 		 this.maxObstacleAmount = rand.nextInt(column - 1) + 1;
