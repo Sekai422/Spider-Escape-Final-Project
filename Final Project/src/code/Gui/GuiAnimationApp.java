@@ -1,19 +1,23 @@
 package code.Gui;
 
-import code.controllers.SoundController;
-import code.text.AnimationApp;
 import interfaces.Constants;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
 /**
- * This runs the application of our game
+ * This runs the application of our game and displays the start menu
  */
-public class GuiAnimationApp extends Application implements Constants {
-	Stage window;
-	StartMenu startMenu;
-	GameScreen gameScreen;
 
+public class GuiAnimationApp extends Application implements Constants {
+	private Stage window;
+	private StartMenu startMenu;
+	private GameScreen gameScreen;
+
+	/**
+	 * Overridden method that starts the javafx application and displays the start menu window
+	 * @param primaryStage
+	 * @throws Exception
+	 */
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		this.window = primaryStage;
@@ -21,7 +25,7 @@ public class GuiAnimationApp extends Application implements Constants {
 		this.window.setScene(this.startMenu.getScene());
 		this.window.show();
 
-		//method to change screen to game scene
+		//closes start menu window and opens game window
 		this.startMenu.getStartButton().setOnAction(e -> {
 			window.close();
 			this.init();
@@ -30,11 +34,19 @@ public class GuiAnimationApp extends Application implements Constants {
 
 	}
 
+	/**
+	 * Initializer for Gui Animation App
+	 * Initializes the start menu and game screen
+	 */
 	public void init() {
 		this.startMenu = new StartMenu();
 		this.gameScreen = new GameScreen();
 	}
 
+	/**
+	 * main method to launch javafx application
+	 * @param args
+	 */
 	public static void main (String[] args) {
 		launch(args);
 	}
