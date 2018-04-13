@@ -1,18 +1,13 @@
 package code.Gui;
 
-import code.controllers.LocationController;
+import code.controllers.*;
 import code.items.Location;
-import code.controllers.FileController;
-import code.controllers.KeyController;
-import code.controllers.NameController;
-import code.controllers.TimeController;
 import code.items.*;
 import interfaces.Constants;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.VBox;
+import javafx.scene.image.Image;
+import javafx.scene.layout.*;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
@@ -30,6 +25,7 @@ public class GameScreen implements Constants {
 	Pane gameLayout;
 	BorderPane baseLayout;
 	int maxObstacleAmount;
+	public SoundController soundController = new SoundController();
 	ArrayList typeClass = new ArrayList();
 	LocationController locationController = new LocationController();
 	ArrayList locations = locationController.getLocations();
@@ -40,6 +36,9 @@ public class GameScreen implements Constants {
 	PauseMenu pauseMenu = new PauseMenu();
 	FileController fileController = new FileController();
 	NameController nameController = new NameController();
+    BackgroundImage myBI= new BackgroundImage(new Image("images/background.gif",	600,700,false,true),
+            BackgroundRepeat.REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT,
+            BackgroundSize.DEFAULT);
 
 	public PauseMenu getPauseMenu() {
 		return this.pauseMenu;
@@ -81,8 +80,8 @@ public class GameScreen implements Constants {
 	}
 
 	public void setGameLayout() {
-		this.gameLayout.setStyle("-fx-background-color: gray;");
-		this.gameLayout.setPrefWidth(windowWidth);
+        this.gameLayout.setBackground(new Background(myBI));
+        this.gameLayout.setPrefWidth(windowWidth);
 		this.gameLayout.setPrefHeight(windowHeight);
 	}
 

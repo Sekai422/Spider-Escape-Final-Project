@@ -1,5 +1,6 @@
 package code.Gui;
 
+import code.controllers.SoundController;
 import interfaces.Constants;
 import javafx.application.Application;
 import javafx.stage.Stage;
