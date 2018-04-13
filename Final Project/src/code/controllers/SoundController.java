@@ -34,5 +34,7 @@ public class SoundController {
         musicPlayer.pause();
     }
 
-
+	public MediaPlayer getMusicPlayer() {
+		return musicPlayer;
+	}
 }

@@ -119,6 +119,7 @@ public class TimeController implements Constants {
 	public void gameOver(GameScreen gameScreen, Avatar avatar){
 		if (avatar.getHealth() == 0) {
 			this.stopTime();
+			gameScreen.getSoundController().getMusicPlayer().stop();
 			gameScreen.setGameOver();
 			gameScreen.getBaseLayout().setCenter(gameScreen.getGameOver());
 			gameScreen.getNameController().display(gameScreen);

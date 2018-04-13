@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 /**
- * This class
+ * This class controls everything for the
  */
 public class GameScreen implements Constants {
 	Stage window;
