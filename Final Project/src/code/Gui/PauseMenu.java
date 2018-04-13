@@ -49,6 +49,7 @@ public class PauseMenu implements Constants {
 		if(gameScreen.getGameLayout().getChildren().get(gameScreen.getGameLayout().getChildren().size()-1).getClass().getSimpleName().equals("VBox") ) {
 			gameScreen.getGameLayout().getChildren().remove(gameScreen.getGameLayout().getChildren().size()-1);
 		}
+
 		gameScreen.getGameLayout().getChildren().add(layout);
 	}
 }

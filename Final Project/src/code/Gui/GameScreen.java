@@ -180,7 +180,6 @@ public class GameScreen implements Constants {
 				heart.getImage().setX(((Location)this.locations.get(i)).getLocationX());
 				heart.getImage().setY(((Location)this.locations.get(i)).getLocationY());
 				heart.getImage().setCache(true);
-				heart.getImage().setOpacity(opacity);
 				this.getGameLayout().getChildren().add(heart.getImage());
 				this.typeClass.add(heart);
 			}
@@ -189,7 +188,6 @@ public class GameScreen implements Constants {
 				token.getImage().setX(((Location)this.locations.get(i)).getLocationX());
 				token.getImage().setY(((Location)this.locations.get(i)).getLocationY());
 				token.getImage().setCache(true);
-				token.getImage().setOpacity(opacity);
 				this.getGameLayout().getChildren().add(token.getImage());
 				this.typeClass.add(token);
 			}
