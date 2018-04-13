@@ -2,38 +2,30 @@ package code.items;
 
 import javafx.scene.image.ImageView;
 
+/**
+ * Class for Obstacles for the game
+ * Essentially when the avatar gets in contact with any Obstacles it will lose health
+ */
 public class Obstacle {
 	Location location;
 	ImageView image;
 
-	public Obstacle(){
-
-	}
-
+	/**
+	 * Getter for image of Obstacle
+	 * @return Obstacle image
+	 */
 	public ImageView getImage() {
 		return this.image;
 	}
 
-	//Method
+
+	/**
+	 * Getter for location of Obstacle
+	 * @return  location of Obstacle
+	 */
 	public Location getLocation() {
 		return this.location;
 	}
-
-	public void setLocation(double x, double y){
-		this.location = new Location(x, y);
-	}
-
-	public void updateLocation(){
-
-	}
-
-	public boolean overlapsWith(Avatar avatar) {
-		if (avatar.location.getLocationX() == this.location.getLocationX() && avatar.location.getLocationY() == this.location.getLocationY()) {
-			return true;
-		} else {
-			return false;
-		}
-	}
-
+	
 }
 

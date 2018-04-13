@@ -28,7 +28,7 @@ public class Location {
 
 	/**
 	 * Getter for location of y value
-	 * @return y value of location 
+	 * @return y value of location
 	 */
 	public double getLocationY() {
 		return this.locationY;
