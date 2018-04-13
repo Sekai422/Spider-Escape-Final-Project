@@ -11,7 +11,7 @@ class GameScreenTest {
     @Test
     void checkScreen() {
         GameScreen aGameScreen = new GameScreen();
-        aGameScreen.setGameScreen();
+        aGameScreen.init();
         //assertEquals(, , );
     }
 

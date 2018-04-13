@@ -20,6 +20,7 @@ import java.util.Random;
  *
  * Once displayed the game starts
  */
+
 public class GameScreen implements Constants {
 	//Instance Variable
 
@@ -32,7 +33,6 @@ public class GameScreen implements Constants {
 	private Pane gameLayout;
 	private BorderPane baseLayout;
 	private Scene scene;
-	private Stage window;
 
 	//Controllers
 	private SoundController soundController = new SoundController();
@@ -91,8 +91,6 @@ public class GameScreen implements Constants {
 		this.getLocationController().shuffleLocations();
 		this.initBaseLayout();
 	}
-
-
 
 //Health Layout
 
@@ -239,21 +237,6 @@ public class GameScreen implements Constants {
 		return this.scene;
 	}
 
-	/**
-	 * When this method is called the game screen window will pop up and start the game
-	 */
-	public void display(){
-		this.window = new Stage();
-		this.initScene();
-		this.window.setScene(this.getScene());
-		this.window.show();
-		this.getTimeController().startTime();
-		this.getTimeController().stopTime();
-		this.getTimeController().startTime();
-		this.soundController.playMusic();
-	}
-
-
 //Images
 
 	/**
@@ -374,6 +357,20 @@ public class GameScreen implements Constants {
 	}
 
 	/**
+	 * When this method is called the game screen window will pop up and start the game
+	 */
+	public void display(){
+		Stage window = new Stage();
+		this.initScene();
+		window.setScene(this.getScene());
+		window.show();
+		this.getTimeController().startTime();
+		this.getTimeController().stopTime();
+		this.getTimeController().startTime();
+		this.soundController.playMusic();
+	}
+
+	/**
 	 * This method is for restarting the game
 	 * Once called the game will restart as fresh
 	 */
@@ -396,7 +393,7 @@ public class GameScreen implements Constants {
 	public Avatar getAvatar (){
 		return this.avatar;
 	}
-	
+
 	/**
 	 * This returns the pause menu
 	 * @return The pause menu
@@ -404,4 +401,6 @@ public class GameScreen implements Constants {
 	public PauseMenu getPauseMenu() {
 		return this.pauseMenu;
 	}
+
+
 }
