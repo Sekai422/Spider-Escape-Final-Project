@@ -1,6 +1,6 @@
 package code.items;
 
-import gui_version.interfaces.Constants;
+import interfaces.Constants;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 

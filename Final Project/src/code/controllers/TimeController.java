@@ -130,7 +130,7 @@ public class TimeController implements Constants {
 	}
 
 	/**
-	 * This method stops the time 
+	 * This method stops the time
 	 */
 	public void stopTime() {
 		this.timer.stop();

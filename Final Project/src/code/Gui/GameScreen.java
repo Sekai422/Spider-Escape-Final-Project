@@ -7,7 +7,7 @@ import code.controllers.KeyController;
 import code.controllers.NameController;
 import code.controllers.TimeController;
 import code.items.*;
-import gui_version.interfaces.Constants;
+import interfaces.Constants;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;

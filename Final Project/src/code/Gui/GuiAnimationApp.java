@@ -1,6 +1,6 @@
 package code.Gui;
 
-import gui_version.interfaces.Constants;
+import interfaces.Constants;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
