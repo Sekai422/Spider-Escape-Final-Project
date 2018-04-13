@@ -7,6 +7,11 @@ import javafx.scene.image.ImageView;
 
 import java.util.Scanner;
 
+/**
+ * Class for avatar which has variables:
+ * health, score, image, location and name
+ *
+ */
 public class Avatar implements Constants {
 //Instance Variable
 	int health;
@@ -16,11 +21,19 @@ public class Avatar implements Constants {
 			new Image("images/walk.gif", objectWidth, objectHeight, true, true ));
 	String name;
 
-	//Constructors
+//Constructors
+
+	/**
+	 * Constructor for initializing avatar
+	 */
 	public Avatar() {
 		this.init();
 	}
 
+	/**
+	 * Initializer for avatar:
+	 * health,score, and location
+	 */
 	public void init(){
 		this.health = avatarInitialHealth;
 		this.score = avatarInitialScore;
@@ -30,74 +43,69 @@ public class Avatar implements Constants {
 	}
 
 //Methods
+
+	/**
+	 * Getter for avatar health
+	 * @return  avatar health
+	 */
 	public int getHealth(){
 		return this.health;
 	}
 
+	/**
+	 * Getter for avatar score
+	 * @return  avatar score
+	 */
 	public int getScore(){
 		return this.score;
 	}
 
+	/**
+	 * Getter for avatar location
+	 * @see Location
+	 * @return  avatar location
+	 */
 	public Location getLocation(){
 		return this.location;
 	}
 
+	/**
+	 * Method for updating avatar's health
+	 * @param change    the amount of health being affected (eg. can be 1, or -1)
+	 */
 	public void updateHealth(int change){
 		this.health = this.health + change;
 	}
 
+	/**
+	 * Method for updating avatar's score
+	 * @param change    the amount of score being affected
+	 */
 	public void updateScore(int change){
 		this.score = this.score + change;
 	}
 
-	public void setLocation(){
-
-	}
-
+	/**
+	 * Getter for avatar image
+	 * @return  avatar image
+	 */
 	public ImageView getImage() {
 
 		return this.image;
 	}
-	
-	public void move( Scanner input){
-		boolean valid = false;
-		while (valid == false){
-			System.out.print("Which way will you go? left, right or stay  ");
-			String move = input.next();
-			if (move.equals("right")){
-				if (this.location.getLocationX() != 2){
-					this.location.setLocationX(this.location.getLocationX() + 1);
-					valid = true;
-				}
-				else{
-					System.out.println("out of bounds! Cannot move right");
-				}
-			}
-			else if (move.equals("left")){
-				if (this.location.getLocationX() != 0){
-					this.location.setLocationX(this.location.getLocationX() - 1);
-					valid = true;
-				}
-				else{
-					System.out.println("out of bounds! Cannot move left");
-				}
-			}
 
-			else if (move.equals("stay")){
-				valid = true;
-			}
-
-			else{
-				System.out.println("Not the commands instructed. Please enter right, left or stay");
-			}
-		}
-	}
-
-
+	/**
+	 * Setter for avatar name
+	 * @param s user's name
+	 */
 	public void setName(String s) {
 		this.name = s;
 	}
 
+	/**
+	 * Getter for avatar name
+	 * @return  Users name
+	 */
 	public String getName() {
 		return this.name;
 	}
