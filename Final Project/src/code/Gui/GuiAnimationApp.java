@@ -15,8 +15,8 @@ public class GuiAnimationApp extends Application implements Constants {
 
 	/**
 	 * Overridden method that starts the javafx application and displays the start menu window
-	 * @param primaryStage
-	 * @throws Exception
+	 * @param primaryStage stage
+	 * @throws Exception any common exception when running javafx application
 	 */
 	@Override
 	public void start(Stage primaryStage) throws Exception {
@@ -45,7 +45,7 @@ public class GuiAnimationApp extends Application implements Constants {
 
 	/**
 	 * main method to launch javafx application
-	 * @param args
+	 * @param args String array
 	 */
 	public static void main (String[] args) {
 		launch(args);
