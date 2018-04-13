@@ -4,14 +4,7 @@
     <list id="f16105b0-0dea-40a4-94b8-eda4f42224bb" name="Revert &quot;New git repository for CPSC 233 project game&quot;" comment="Revert &quot;New git repository for CPSC 233 project game&quot;&#10;&#10;This reverts commit e5a24d1" />
     <list id="acc2e0e0-5063-4722-889d-9f46ee194136" name="Revert &quot;New git repository for CPSC 233 project game&quot;-2" comment="Revert &quot;New git repository for CPSC 233 project game&quot;&#10;&#10;This reverts commit e5a24d1" />
     <list id="e32f3aa5-e82e-483a-9f7c-1ba3aaba6fb4" name="Revert: New git repository for CPSC 233 project game" comment="" />
-    <list default="true" id="43b59cae-a0ed-4547-b93e-a4f699bb190b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Final Project/src/code/Gui/GameScreen.java" afterPath="$PROJECT_DIR$/Final Project/src/code/Gui/GameScreen.java" />
-      <change beforePath="$PROJECT_DIR$/Final Project/src/code/Gui/PauseMenu.java" afterPath="$PROJECT_DIR$/Final Project/src/code/Gui/PauseMenu.java" />
-      <change beforePath="$PROJECT_DIR$/Final Project/src/code/controllers/KeyController.java" afterPath="$PROJECT_DIR$/Final Project/src/code/controllers/KeyController.java" />
-      <change beforePath="$PROJECT_DIR$/out/production/Final Project/images/background.gif" afterPath="$PROJECT_DIR$/out/production/Final Project/images/background.gif" />
-    </list>
+    <list default="true" id="43b59cae-a0ed-4547-b93e-a4f699bb190b" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored mask="*.iml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -303,22 +296,6 @@
             <path>
               <item name="Spider Escape" type="b2602c69:ProjectViewProjectNode" />
               <item name="Spider Escape" type="462c0819:PsiDirectoryNode" />
-              <item name="Final Project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="code" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Spider Escape" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spider Escape" type="462c0819:PsiDirectoryNode" />
-              <item name="Final Project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="code" type="462c0819:PsiDirectoryNode" />
-              <item name="Gui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Spider Escape" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spider Escape" type="462c0819:PsiDirectoryNode" />
               <item name="out" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -531,7 +508,7 @@
       <workItem from="1523558507127" duration="14448000" />
       <workItem from="1523594967398" duration="6008000" />
       <workItem from="1523606391873" duration="4080000" />
-      <workItem from="1523639394055" duration="3904000" />
+      <workItem from="1523639394055" duration="4181000" />
     </task>
     <task id="LOCAL-00001" summary="New git repository for CPSC 233 project game">
       <created>1523427465515</created>
@@ -659,11 +636,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523643617537</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="don't need .idea file">
+      <created>1523645321905</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1523645321905</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50608000" />
+    <option name="totallyTimeSpent" value="50885000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -683,14 +667,14 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32352942" sideWeight="0.5075643" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32755905" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32352942" sideWeight="0.4924357" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32352942" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31181103" sideWeight="0.4919473" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32755905" sideWeight="0.49707174" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23676248" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22913617" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -765,7 +749,8 @@
     <MESSAGE value="made pause menu inside game screen" />
     <MESSAGE value="fixed bug pause menu" />
     <MESSAGE value="took out transparency of Collectibles (Token and Heart)" />
-    <option name="LAST_COMMIT_MESSAGE" value="took out transparency of Collectibles (Token and Heart)" />
+    <MESSAGE value="don't need .idea file" />
+    <option name="LAST_COMMIT_MESSAGE" value="don't need .idea file" />
   </component>
   <component name="WindowStateProjectService">
     <state width="178" height="183" key="Git.Branch.Popup" />
