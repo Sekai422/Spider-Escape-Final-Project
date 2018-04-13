@@ -18,6 +18,14 @@ public class Obstacle {
 		return this.image;
 	}
 
+	/**
+	 * Setter for setting the image for Obstacle subclasses
+	 * @param image The image that is set 
+	 */
+	public void setImage(ImageView image){
+		this.image = image;
+	}
+
 
 	/**
 	 * Getter for location of Obstacle
