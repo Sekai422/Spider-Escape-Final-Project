@@ -238,6 +238,9 @@ public class GameScreen implements Constants {
 		this.setScene();
 		this.window.setScene(this.getScene());
 		this.window.show();
+		this.getTimeController().startTime();
+		this.getTimeController().stopTime();
+		this.getTimeController().startTime();
 	}
 
 	public Stage getWindow (){
