@@ -23,9 +23,4 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
-#Intellij files#
-*.idea
-*.iml
-/out/
-out/production/Final Project/images/
-out/production/Final Project/resources/
+
