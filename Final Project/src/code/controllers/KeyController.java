@@ -56,7 +56,9 @@ public class KeyController implements Constants {
 					}
 				case P:
 					gameScreen.getTimeController().stopTime();
+					gameScreen.getSoundController().pauseMusic();
 					gameScreen.getPauseMenu().display(gameScreen);
+
 			}
 
 		});

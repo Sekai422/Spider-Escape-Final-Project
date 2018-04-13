@@ -14,6 +14,9 @@ import javafx.stage.Stage;
 import java.util.ArrayList;
 import java.util.Random;
 
+/**
+ * This class
+ */
 public class GameScreen implements Constants {
 	Stage window;
 	Scene scene;
@@ -216,6 +219,7 @@ public class GameScreen implements Constants {
 		this.getHealth().setText("Health: " + avatar.getHealth());
 		this.getScore().setText("Score: " + avatar.getScore());
 		this.getTimeController().startTime();
+		this.getSoundController().playMusic();
 	}
 
 	public FileController getFileController() {
@@ -238,6 +242,7 @@ public class GameScreen implements Constants {
 		this.getTimeController().startTime();
 		this.getTimeController().stopTime();
 		this.getTimeController().startTime();
+		this.soundController.playMusic();
 	}
 
 	public Stage getWindow (){
@@ -246,5 +251,9 @@ public class GameScreen implements Constants {
 
 	public void setWindow(){
 
+	}
+
+	public SoundController getSoundController(){
+		return this.soundController;
 	}
 }

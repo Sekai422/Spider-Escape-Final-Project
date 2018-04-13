@@ -25,6 +25,7 @@ public class PauseMenu implements Constants {
 		continueButton.setOnAction(e -> {
 			gameScreen.getGameLayout().getChildren().remove(gameScreen.getGameLayout().getChildren().size()-1);
 			gameScreen.getTimeController().startTime();
+			gameScreen.getSoundController().playMusic();
 		});
 
 		saveButton.setOnAction(e -> {
