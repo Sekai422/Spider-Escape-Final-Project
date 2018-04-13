@@ -10,6 +10,12 @@ import javafx.stage.Stage;
 
 public class PauseMenu implements Constants {
 
+    /**
+     * Displays the gamescreen pause menu, sets the actionhandler for pause menu buttons, stops the current timeController
+     * to stop gameplay.
+     * @param gameScreen argument of object gameScreen is passed to create the pause menu modifications for
+     *                   game screen in GuiAnimationAPp
+     */
 	public void display (GameScreen gameScreen) {
 
 		VBox layout = new VBox(10);
