@@ -14,12 +14,12 @@ import java.util.Scanner;
  */
 public class Avatar implements Constants {
 //Instance Variable
-	int health;
-	int score;
-	Location location;
-	ImageView image = new ImageView(
+	private int health;
+	private int score;
+	private Location location;
+	private ImageView image = new ImageView(
 			new Image("images/walk.gif", objectWidth, objectHeight, true, true ));
-	String name;
+	private String name;
 
 //Constructors
 
