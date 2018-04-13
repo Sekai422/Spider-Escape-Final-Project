@@ -147,7 +147,6 @@ public class GameScreen implements Constants {
 	public void setScene() {
 		this.keyController.keyEventHandler(avatar, this);
 		this.timeController.init(this, this.avatar);
-		this.timeController.startTime();
 	}
 
 //Images
@@ -239,7 +238,6 @@ public class GameScreen implements Constants {
 		this.setScene();
 		this.window.setScene(this.getScene());
 		this.window.show();
-		this.getTimeController().startTime();
 	}
 
 	public Stage getWindow (){
