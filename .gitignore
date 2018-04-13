@@ -26,3 +26,6 @@ hs_err_pid*
 #Intellij files#
 *.idea
 *.iml
+/out/
+out/production/Final Project/images/
+out/production/Final Project/resources/
