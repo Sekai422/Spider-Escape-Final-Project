@@ -4,16 +4,10 @@
     <list id="f16105b0-0dea-40a4-94b8-eda4f42224bb" name="Revert &quot;New git repository for CPSC 233 project game&quot;" comment="Revert &quot;New git repository for CPSC 233 project game&quot;&#10;&#10;This reverts commit e5a24d1" />
     <list id="acc2e0e0-5063-4722-889d-9f46ee194136" name="Revert &quot;New git repository for CPSC 233 project game&quot;-2" comment="Revert &quot;New git repository for CPSC 233 project game&quot;&#10;&#10;This reverts commit e5a24d1" />
     <list id="e32f3aa5-e82e-483a-9f7c-1ba3aaba6fb4" name="Revert: New git repository for CPSC 233 project game" comment="" />
-    <list default="true" id="43b59cae-a0ed-4547-b93e-a4f699bb190b" name="Default" comment="made pause menu inside">
+    <list default="true" id="43b59cae-a0ed-4547-b93e-a4f699bb190b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Final Project/src/code/Gui/GameScreen.java" afterPath="$PROJECT_DIR$/Final Project/src/code/Gui/GameScreen.java" />
-      <change beforePath="$PROJECT_DIR$/Final Project/src/code/Gui/GuiAnimationApp.java" afterPath="$PROJECT_DIR$/Final Project/src/code/Gui/GuiAnimationApp.java" />
       <change beforePath="$PROJECT_DIR$/Final Project/src/code/Gui/PauseMenu.java" afterPath="$PROJECT_DIR$/Final Project/src/code/Gui/PauseMenu.java" />
-      <change beforePath="$PROJECT_DIR$/Final Project/src/code/Gui/StartMenu.java" afterPath="$PROJECT_DIR$/Final Project/src/code/Gui/StartMenu.java" />
-      <change beforePath="$PROJECT_DIR$/Final Project/src/code/controllers/TimeController.java" afterPath="$PROJECT_DIR$/Final Project/src/code/controllers/TimeController.java" />
-      <change beforePath="$PROJECT_DIR$/Final Project/src/code/items/Avatar.java" afterPath="$PROJECT_DIR$/Final Project/src/code/items/Avatar.java" />
-      <change beforePath="$PROJECT_DIR$/Final Project/src/code/items/Spider.java" afterPath="$PROJECT_DIR$/Final Project/src/code/items/Spider.java" />
-      <change beforePath="$PROJECT_DIR$/Final Project/src/code/items/Token.java" afterPath="$PROJECT_DIR$/Final Project/src/code/items/Token.java" />
+      <change beforePath="$PROJECT_DIR$/out/production/Final Project/resources/SavedFile.txt" afterPath="$PROJECT_DIR$/out/production/Final Project/resources/SavedFile.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored mask="*.iml" />
@@ -39,11 +33,21 @@
       <file leaf-file-name="PauseMenu.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Final Project/src/code/Gui/PauseMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="46" column="39" lean-forward="false" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
+            <state relative-caret-position="201">
+              <caret line="51" column="61" lean-forward="true" selection-start-line="51" selection-start-column="61" selection-end-line="51" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KeyController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Final Project/src/code/controllers/KeyController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="58" column="64" lean-forward="false" selection-start-line="58" selection-start-column="64" selection-end-line="58" selection-end-column="64" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -124,7 +128,6 @@
         <option value="$PROJECT_DIR$/Final Project/src/code/text/Main.java" />
         <option value="$PROJECT_DIR$/Final Project/src/interfaces/Constants.java" />
         <option value="$PROJECT_DIR$/Final Project/src/resources/SavedFile.txt" />
-        <option value="$PROJECT_DIR$/Final Project/src/code/controllers/KeyController.java" />
         <option value="$PROJECT_DIR$/Final Project/src/code/controllers/LocationController.java" />
         <option value="$PROJECT_DIR$/Final Project/src/code/controllers/NameController.java" />
         <option value="$PROJECT_DIR$/Final Project/src/code/controllers/FileController.java" />
@@ -135,6 +138,7 @@
         <option value="$PROJECT_DIR$/Final Project/src/code/items/Avatar.java" />
         <option value="$PROJECT_DIR$/Final Project/src/code/items/Spider.java" />
         <option value="$PROJECT_DIR$/Final Project/src/code/items/Token.java" />
+        <option value="$PROJECT_DIR$/Final Project/src/code/controllers/KeyController.java" />
         <option value="$PROJECT_DIR$/Final Project/src/code/Gui/PauseMenu.java" />
       </list>
     </option>
@@ -230,6 +234,14 @@
               <item name="Final Project" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="code" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Spider Escape" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Spider Escape" type="462c0819:PsiDirectoryNode" />
+              <item name="Final Project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Spider Escape" type="b2602c69:ProjectViewProjectNode" />
@@ -434,7 +446,7 @@
       <workItem from="1523508719711" duration="5000" />
       <workItem from="1523558507127" duration="14448000" />
       <workItem from="1523594967398" duration="6008000" />
-      <workItem from="1523606391873" duration="1642000" />
+      <workItem from="1523606391873" duration="3928000" />
     </task>
     <task id="LOCAL-00001" summary="New git repository for CPSC 233 project game">
       <created>1523427465515</created>
@@ -534,11 +546,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523607369817</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="made pause menu inside game screen">
+      <created>1523608061715</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1523608061715</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44266000" />
+    <option name="totallyTimeSpent" value="46552000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -638,7 +657,8 @@
     <MESSAGE value="Added Text version code" />
     <MESSAGE value="deleted some class that aren't used" />
     <MESSAGE value="Commented all Controllers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commented all Controllers" />
+    <MESSAGE value="made pause menu inside game screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="made pause menu inside game screen" />
   </component>
   <component name="WindowStateProjectService">
     <state width="178" height="183" key="Git.Branch.Popup" />
@@ -941,24 +961,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Final Project/src/code/controllers/KeyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="18" column="18" lean-forward="false" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Final Project/src/code/Gui/GameScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Final Project/src/code/Gui/GuiAnimationApp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -1033,10 +1035,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Final Project/src/code/Gui/GameScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final Project/src/code/controllers/KeyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="58" column="64" lean-forward="false" selection-start-line="58" selection-start-column="64" selection-end-line="58" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Final Project/src/code/Gui/PauseMenu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="46" column="39" lean-forward="false" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
+        <state relative-caret-position="201">
+          <caret line="51" column="61" lean-forward="true" selection-start-line="51" selection-start-column="61" selection-end-line="51" selection-end-column="61" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

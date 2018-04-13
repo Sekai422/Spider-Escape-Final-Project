@@ -46,6 +46,9 @@ public class PauseMenu implements Constants {
 		layout.setPrefHeight(windowHeight);
 		layout.setPrefWidth(windowWidth);
 
+		if(gameScreen.getGameLayout().getChildren().get(gameScreen.getGameLayout().getChildren().size()-1).getClass().getSimpleName().equals("VBox") ) {
+			gameScreen.getGameLayout().getChildren().remove(gameScreen.getGameLayout().getChildren().size()-1);
+		}
 		gameScreen.getGameLayout().getChildren().add(layout);
 	}
 }
