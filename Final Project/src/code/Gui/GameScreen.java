@@ -1,11 +1,7 @@
 package code.Gui;
 
-import code.controllers.LocationController;
+import code.controllers.*;
 import code.items.Location;
-import code.controllers.FileController;
-import code.controllers.KeyController;
-import code.controllers.NameController;
-import code.controllers.TimeController;
 import code.items.*;
 import gui_version.interfaces.Constants;
 import javafx.scene.Scene;
@@ -30,6 +26,7 @@ public class GameScreen implements Constants {
 	int maxObstacleAmount;
 	ArrayList typeClass = new ArrayList();
 	LocationController locationController = new LocationController();
+	SoundController soundController = new SoundController();
 	ArrayList locations = locationController.getLocations();
 	Avatar avatar = new Avatar();
 	Random rand = new Random();
@@ -38,9 +35,11 @@ public class GameScreen implements Constants {
 	PauseMenu pauseMenu = new PauseMenu();
 	FileController fileController = new FileController();
 	NameController nameController = new NameController();
-	BackgroundImage myBI= new BackgroundImage(new Image("images/animation.gif",600,700,false,true),
+	BackgroundImage myBI= new BackgroundImage(new Image("images/animation.gif",	600,700,false,true),
 			BackgroundRepeat.REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT,
 			BackgroundSize.DEFAULT);
+
+
 	public PauseMenu getPauseMenu() {
 		return this.pauseMenu;
 	}

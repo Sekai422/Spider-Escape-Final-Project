@@ -15,6 +15,8 @@ import javafx.util.Duration;
 public class TimeController implements Constants {
 	Timeline timer;
 	KeyFrame frame;
+	SoundController soundController = new SoundController();
+
 	double distance = 0;
 	double addDistance = 1;
 
@@ -49,16 +51,19 @@ public class TimeController implements Constants {
 						((ImageView) gameScreen.getGameLayout().getChildren().get(i)).getY() + this.addDistance);
 				if (gameScreen.getGameLayout().getChildren().get(i).getBoundsInParent().intersects(avatar.getImage().getBoundsInParent())) {
 					if (gameScreen.getTypeClass().get(i - 1) instanceof Spider) {
+						soundController.playMedia(soundController.damageSound);
 						avatar.updateHealth(((Spider) gameScreen.getTypeClass().get(i - 1)).getDamage());
 						gameScreen.getHealth().setText("Health: " + avatar.getHealth());
 						this.gameOver(gameScreen, avatar);
 
 					} else if (gameScreen.getTypeClass().get(i - 1) instanceof Heart) {
+						soundController.playMedia(soundController.healthSound);
 						avatar.updateHealth(((Heart) gameScreen.getTypeClass().get(i - 1)).getHealthUp());
 						gameScreen.getHealth().setText("Health: " + avatar.getHealth());
 						this.gameOver(gameScreen, avatar);
 
 					} else if (gameScreen.getTypeClass().get(i - 1) instanceof Token) {
+						soundController.playMedia(soundController.coinSound);
 						avatar.updateScore(((Token) gameScreen.getTypeClass().get(i - 1)).getScore());
 						gameScreen.getScore().setText("Score: " + avatar.getScore());
 

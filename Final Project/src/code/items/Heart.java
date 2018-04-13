@@ -7,7 +7,7 @@ public class Heart extends Collectible {
 	int healthUp = 1;
 
 	public Heart() {
-		this.image = new ImageView(new Image("images/heart.png", 50, 50, true, true));
+		this.image = new ImageView(new Image("images/heart.png", 100, 100, true, true));
 	}
 
 	public int getHealthUp(){
