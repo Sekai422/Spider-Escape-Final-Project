@@ -13,7 +13,7 @@ public class Avatar implements Constants {
 	int score;
 	Location location;
 	ImageView image = new ImageView(
-			new Image("images/Walk.gif", objectWidth, objectWidth, false, true ));
+			new Image("images/walkingavatar.gif", objectWidth, objectWidth, false, true ));
 	String name;
 
 	//Constructors

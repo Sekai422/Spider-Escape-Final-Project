@@ -1,5 +1,6 @@
 package code.Gui;
 
+import code.controllers.SoundController;
 import gui_version.interfaces.Constants;
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -8,7 +9,6 @@ public class GuiAnimationApp extends Application implements Constants {
 	Stage window;
 	StartMenu startMenu;
 	GameScreen gameScreen;
-
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		this.window = primaryStage;
@@ -24,6 +24,7 @@ public class GuiAnimationApp extends Application implements Constants {
 		});
 
 	}
+
 
 	public void init() {
 		this.startMenu = new StartMenu();

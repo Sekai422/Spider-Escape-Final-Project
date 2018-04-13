@@ -102,6 +102,7 @@ public class TimeController implements Constants {
 	}
 
 	public void stopTime() {
+		this.soundController.pauseMusic();
 		this.timer.stop();
 	}
 }

@@ -25,8 +25,8 @@ public class GameScreen implements Constants {
 	BorderPane baseLayout;
 	int maxObstacleAmount;
 	ArrayList typeClass = new ArrayList();
-	LocationController locationController = new LocationController();
 	SoundController soundController = new SoundController();
+	LocationController locationController = new LocationController();
 	ArrayList locations = locationController.getLocations();
 	Avatar avatar = new Avatar();
 	Random rand = new Random();
@@ -57,6 +57,7 @@ public class GameScreen implements Constants {
 
 	//Constructor
 	public GameScreen(){
+		this.soundController.playMedia(soundController.music);
 		this.init();
 		this.setGameScreen();
 	}

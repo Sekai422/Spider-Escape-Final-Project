@@ -6,7 +6,7 @@ import java.io.File;
 
 public class SoundController {
 
-    Media music = new Media(new File("Final Project/src/media/ActionFace.mp3").toURI().toString());
+    public Media music = new Media(new File("Final Project/src/media/ActionFace.mp3").toURI().toString());
     Media healthSound = new Media(new File("Final Project/src/media/healthup.wav").toURI().toString());
     Media coinSound = new Media(new File("Final Project/src/media/coin.wav").toURI().toString());
     Media damageSound = new Media(new File("Final Project/src/media/hit.wav").toURI().toString());
@@ -15,7 +15,10 @@ public class SoundController {
 
         MediaPlayer mediaPlayer = new MediaPlayer(sound);
         mediaPlayer.play();
+    }
 
+    public void pauseMusic() {
+        MediaPlayer mediaPlayer = new MediaPlayer(music);
     }
 
 
