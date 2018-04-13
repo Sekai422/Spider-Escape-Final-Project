@@ -291,7 +291,8 @@ public class GameScreen implements Constants {
 	 *This method creates and sets the Collectibles images of random numbers for one row.
 	 * It is generated offscreen of top of the game screen
 	 * And also stores object created to ArrayList typeClass
-	 * it is made sure that the
+	 * It is made sure that the number of Collectibles generated will not result in overlapping between Obstacles
+	 *
 	 */
 	public void setCollectiblesImage(){
 		int bound = column - this.maxObstacleAmount;
@@ -317,20 +318,65 @@ public class GameScreen implements Constants {
 		}
 	}
 
-//EventHandlers
+//Controllers
 
+	/**
+	 * Getter for TimeController
+	 * @see TimeController
+	 * @return TimeController timeController
+	 */
 	public TimeController getTimeController() {
 		return this.timeController;
 	}
 
-	public ArrayList getTypeClass(){
-		return this.typeClass;
-	}
-
+	/**
+	 * Getter for LocationController
+	 * @see LocationController
+	 * @return LocationController locationController
+	 */
 	public LocationController getLocationController() {
 		return this.locationController;
 	}
 
+	/**
+	 * Getter for ArrayList TypeClass
+	 * @return  ArrayList TypeClass
+	 */
+	public ArrayList getTypeClass(){
+		return this.typeClass;
+	}
+
+	/**
+	 * Getter for FileController
+	 * @see NameController
+	 * @return  FileController fileController
+	 */
+	public FileController getFileController() {
+		return this.fileController;
+	}
+
+	/**
+	 * Getter for NameController
+	 * @see NameController
+	 * @return  NameController nameController
+	 */
+	public NameController getNameController() {
+		return this.nameController;
+	}
+
+	/**
+	 * Getter for SoundController
+	 * @see SoundController
+	 * @return  SoundController soundController
+	 */
+	public SoundController getSoundController(){
+		return this.soundController;
+	}
+
+	/**
+	 * This method is for restarting the game
+	 * Once called the game will restart as fresh
+	 */
 	public void restart(){
 		this.avatar.init();
 		this.typeClass.clear();
@@ -342,25 +388,15 @@ public class GameScreen implements Constants {
 		this.getSoundController().playMusic();
 	}
 
-	public FileController getFileController() {
-		return this.fileController;
-	}
-
-	public NameController getNameController() {
-		return this.nameController;
-	}
+	/**
+	 * Getter for avatar
+	 * @return  Avatar avatar
+	 */
 
 	public Avatar getAvatar (){
 		return this.avatar;
 	}
-
-
-
-
-	public SoundController getSoundController(){
-		return this.soundController;
-	}
-
+	
 	/**
 	 * This returns the pause menu
 	 * @return The pause menu
