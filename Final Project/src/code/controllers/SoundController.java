@@ -12,6 +12,7 @@ public class SoundController {
     Media healthSound = new Media(new File("media/healthup.wav").toURI().toString());
     Media coinSound = new Media(new File("media/coin.wav").toURI().toString());
     Media damageSound = new Media(new File("media/hit.wav").toURI().toString());
+    MediaPlayer musicPlayer = new MediaPlayer(music);
 
     public void playMedia (Media sound) {
 
@@ -20,17 +21,17 @@ public class SoundController {
     }
 
     public void playMusic() {
-        MediaPlayer mediaPlayer = new MediaPlayer(music);
-        mediaPlayer.setOnEndOfMedia(new Runnable() {
+
+        musicPlayer.setOnEndOfMedia(new Runnable() {
             public void run() {
-                mediaPlayer.seek(Duration.ZERO);
+                musicPlayer.seek(Duration.ZERO);
             }
         });
-        mediaPlayer.play();
+        musicPlayer.play();
     }
 
     public void pauseMusic() {
-        MediaPlayer mediaPlayer = new MediaPlayer(music);
+        musicPlayer.pause();
     }
 
 
