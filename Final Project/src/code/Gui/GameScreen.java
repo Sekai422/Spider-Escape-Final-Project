@@ -14,11 +14,13 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
+import javafx.stage.Stage;
 
 import java.util.ArrayList;
 import java.util.Random;
 
 public class GameScreen implements Constants {
+	Stage window;
 	Scene scene;
 	Label health;
 	Label score;
@@ -71,7 +73,6 @@ public class GameScreen implements Constants {
 		this.setAvatarImage();
 		this.getLocationController().shuffleLocations();
 		this.setBaseLayout();
-		this.setScene();
 	}
 
 //Game Layout
@@ -146,8 +147,6 @@ public class GameScreen implements Constants {
 	public void setScene() {
 		this.keyController.keyEventHandler(avatar, this);
 		this.timeController.init(this, this.avatar);
-		this.timeController.startTime();
-
 	}
 
 //Images
@@ -232,5 +231,20 @@ public class GameScreen implements Constants {
 
 	public Avatar getAvatar (){
 		return this.avatar;
+	}
+
+	public void display(){
+		this.window = new Stage();
+		this.setScene();
+		this.window.setScene(this.getScene());
+		this.window.show();
+	}
+
+	public Stage getWindow (){
+		return this.window;
+	}
+
+	public void setWindow(){
+
 	}
 }

@@ -1,17 +1,24 @@
 package code.text;
 
 import code.items.*;
+import javafx.application.Application;
+import javafx.stage.Stage;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 import java.util.Scanner;
 
-public class AnimationApp {
+public class AnimationApp extends Application{
 
 	private Avatar avatar;
 	private ArrayList<Collectible> collectibles;
 	private ArrayList<Obstacle> obstacles;
+
+	@Override
+	public void start(Stage primaryStage) throws Exception {
+
+	}
 
 	public void initialize() {
 		this.avatar = new Avatar();
@@ -200,7 +207,8 @@ public class AnimationApp {
 					if (collectibles.get(i) instanceof Heart) {
 						this.avatar.updateHealth(((Heart) collectibles.get(i)).getHealthUp());
 					}
-					else if (collectibles.get(i) instanceof Token) {
+					else if
+				(collectibles.get(i) instanceof Token) {
 						this.avatar.updateScore(((Token) collectibles.get(i)).getScore());
 					}
 				}
@@ -236,9 +244,9 @@ public class AnimationApp {
 
 	}
 
+
 	public static void main(String[] args){
 		AnimationApp animationApp = new AnimationApp();
 		animationApp.start();
 	}
-
 }

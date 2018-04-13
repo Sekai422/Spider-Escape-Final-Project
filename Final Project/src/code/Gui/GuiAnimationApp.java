@@ -18,9 +18,9 @@ public class GuiAnimationApp extends Application implements Constants {
 
 		//method to change screen to game scene
 		this.startMenu.getStartButton().setOnAction(e -> {
+			window.close();
 			this.init();
-			this.window.setScene(this.gameScreen.getScene());
-			this.gameScreen.getTimeController().startTime();
+			this.gameScreen.display();
 		});
 
 	}
