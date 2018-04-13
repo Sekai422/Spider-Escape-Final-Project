@@ -2,8 +2,17 @@ package code.controllers;
 
 import code.items.Avatar;
 import code.Gui.GameScreen;
-import gui_version.interfaces.Constants;
+import interfaces.Constants;
 
+/**
+ * This class controls what happens when a key is pressed during the game is played
+ *
+ * when an A key is pressed the avatar moves left
+ * when a left arrow key is pressed the avatar moves left
+ * when an D key is pressed the avatar moves right
+ * when a right arrow key is pressed the avatar moves right
+ * when a P key is pressed the game pauses
+ */
 public class KeyController implements Constants {
 
 	public void keyEventHandler(Avatar avatar, GameScreen gameScreen){

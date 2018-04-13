@@ -1,4 +1,4 @@
-package gui_version.interfaces;
+package interfaces;
 
 public interface Constants {
 	//Windows

@@ -7,8 +7,17 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
+/**
+ * This class is for getting the name of the person who played the game.
+ */
+
 public class NameController {
 
+	/**
+	 * This method will display a window where the user has to enter their name.
+	 * If they don't want to it is entered as UNKNOWN as default
+	 * @param screen
+	 */
 	public void display(GameScreen screen){
 		Stage window = new Stage();
 		window.setTitle("Name Input");
