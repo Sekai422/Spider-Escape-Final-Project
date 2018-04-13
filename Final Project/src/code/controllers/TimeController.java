@@ -120,7 +120,7 @@ public class TimeController implements Constants {
 		if (avatar.getHealth() == 0) {
 			this.stopTime();
 			gameScreen.getSoundController().getMusicPlayer().stop();
-			gameScreen.setGameOver();
+			gameScreen.initGameOver();
 			gameScreen.getBaseLayout().setCenter(gameScreen.getGameOver());
 			gameScreen.getNameController().display(gameScreen);
 		}

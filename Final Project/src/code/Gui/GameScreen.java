@@ -15,149 +15,263 @@ import java.util.ArrayList;
 import java.util.Random;
 
 /**
- * This class controls everything for the
+ * This class sets up the game screen when it is created
+ * and it will be displayed when the display method is called
+ *
+ * Once displayed the game starts
  */
 public class GameScreen implements Constants {
-	Stage window;
-	Scene scene;
-	Label health;
-	Label score;
-	Label gameOver;
-	VBox healthLayout;
-	VBox scoreLayout;
-	Pane gameLayout;
-	BorderPane baseLayout;
-	int maxObstacleAmount;
-	public SoundController soundController = new SoundController();
-	ArrayList typeClass = new ArrayList();
-	LocationController locationController = new LocationController();
-	ArrayList locations = locationController.getLocations();
-	Avatar avatar = new Avatar();
-	Random rand = new Random();
-	TimeController timeController = new TimeController(this, this.avatar);
-	KeyController keyController = new KeyController();
-	PauseMenu pauseMenu = new PauseMenu();
-	FileController fileController = new FileController();
-	NameController nameController = new NameController();
-    BackgroundImage myBI= new BackgroundImage(new Image("images/background.gif",	600,700,false,true),
-            BackgroundRepeat.REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT,
+	//Instance Variable
+
+	//Set up for the game screen layout
+	private Label health;
+	private Label score;
+	private Label gameOver;
+	private VBox healthLayout;
+	private VBox scoreLayout;
+	private Pane gameLayout;
+	private BorderPane baseLayout;
+	private Scene scene;
+	private Stage window;
+
+	//Controllers
+	private SoundController soundController = new SoundController();
+	private LocationController locationController = new LocationController();
+	private ArrayList locations = locationController.getLocations();
+	private TimeController timeController = new TimeController(this, this.avatar);
+	private KeyController keyController = new KeyController();
+	private FileController fileController = new FileController();
+	private NameController nameController = new NameController();
+
+	//creates avatar object
+	private Avatar avatar = new Avatar();
+
+	//Used for generating random amounts of Obstacles and Collectibles
+	private Random rand = new Random();
+
+	//To store Obstacle amount so that there would be no overlap for Collectible amount
+	private int maxObstacleAmount;
+
+	//Used for storing Obstacles and Collectibles created
+	private ArrayList typeClass = new ArrayList();
+
+	//Used to generate the pause menu
+	private PauseMenu pauseMenu = new PauseMenu();
+
+	//Used for background image of game
+	private  BackgroundImage myBI= new BackgroundImage(
+			new Image("images/background.gif",
+					600,
+					700,
+					false,
+					true),
+            BackgroundRepeat.REPEAT,
+			BackgroundRepeat.NO_REPEAT,
+			BackgroundPosition.DEFAULT,
             BackgroundSize.DEFAULT);
 
-	public PauseMenu getPauseMenu() {
-		return this.pauseMenu;
-	}
-
-	public void init(){
-		this.gameLayout = new Pane();
-		this.baseLayout = new BorderPane();
-		this.health = new Label("Health: " + avatar.getHealth());
-		this.healthLayout = new VBox();
-		this.score = new Label("Score: " + avatar.getScore());
-		this.scoreLayout = new VBox();
-		this.gameOver = new Label("Game Over");
-		this.scene = new Scene(this.getBaseLayout());
-	}
-
-	//Constructor
+	/**
+	 * This Constructor calls the initialize method
+	 */
 	public GameScreen(){
 		this.init();
-		this.setGameScreen();
 	}
 
-//Initialize method
-	public void setGameScreen() {
-		this.setHealth();
-		this.setHealthLayout();
-		this.setScore();
-		this.setScoreLayout();
-		this.setGameOver();
-		this.setGameLayout();
+	/**
+	 * This method initializes the Game Screen Layout and all settings
+	 */
+	public void init(){
+		this.initHealth();
+		this.initHealthLayout();
+		this.initScore();
+		this.initScoreLayout();
+		this.initGameOver();
+		this.initGameLayout();
 		this.setAvatarImage();
 		this.getLocationController().shuffleLocations();
-		this.setBaseLayout();
+		this.initBaseLayout();
+	}
+
+
+
+//Health Layout
+
+	/**
+	 * Initializer for health label
+	 */
+	public void initHealth() {
+		this.health = new Label("Health: " + avatar.getHealth());
+		this.health.setFont(new Font("Helvetica Neut Bold", 15));
+	}
+
+	/**
+	 * Getter for health label
+	 * @return  Label for health
+	 */
+	public Label getHealth() {
+		return this.health;
+	}
+
+	/**
+	 * Initializer for health layout
+	 */
+	public void initHealthLayout() {
+		this.healthLayout = new VBox();
+		this.healthLayout.getChildren().add(this.getHealth());
+	}
+
+	/**
+	 * Getter for health layout
+	 * @return  VBox of health layout
+	 */
+	public VBox getHealthLayout() {
+		return this.healthLayout;
+	}
+
+//Score Layout
+
+	/**
+	 * Initializer for score label
+	 */
+	public void initScore() {
+		this.score = new Label("Score: " + avatar.getScore());
+		this.score.setFont(new Font("Helvetica Neut Bold", 15));
+	}
+
+	/**
+	 * Getter for score label
+	 * @return label for score
+	 */
+	public Label getScore() {
+		return this.score;
+	}
+
+	/**
+	 * Initializer for score layout
+	 */
+	public void initScoreLayout(){
+		this.scoreLayout = new VBox();
+		this.scoreLayout.getChildren().add(this.getScore());
+	}
+
+	/**
+	 * Getter for score layout
+	 * @return  VBox of score layout
+	 */
+	public VBox getScoreLayout() {
+		return this.scoreLayout;
+	}
+
+//Game Over Layout
+
+	/**
+	 * Getter for game over label
+	 * @return  Label of game over
+	 */
+	public Label getGameOver() {
+		return this.gameOver;
+	}
+
+	/**
+	 *Initializer for game over label
+	 */
+	public void initGameOver(){
+		this.gameOver = new Label("Game Over");
+		this.gameOver.setFont((new Font("Helvetica Neut Bold", 50)));
 	}
 
 //Game Layout
+
+	/**
+	 * Initializer for game layout which is the screen where the game takes place
+	 */
+	public void initGameLayout() {
+		this.gameLayout = new Pane();
+		this.gameLayout.setBackground(new Background(myBI));
+		this.gameLayout.setPrefWidth(windowWidth);
+		this.gameLayout.setPrefHeight(windowHeight);
+	}
+
+	/**
+	 * Getter for game layout screen
+	 * @return  Pane of game layout
+	 */
 	public Pane getGameLayout() {
 		return this.gameLayout;
 	}
 
-	public void setGameLayout() {
-        this.gameLayout.setBackground(new Background(myBI));
-        this.gameLayout.setPrefWidth(windowWidth);
-		this.gameLayout.setPrefHeight(windowHeight);
-	}
-
 //Base Layout
-	public BorderPane getBaseLayout() {
-		return this.baseLayout;
-	}
 
-	public void setBaseLayout(){
+	/**
+	 * Initializer for the base layout which is the entire screen of the game window
+	 */
+	public void initBaseLayout(){
+		this.baseLayout = new BorderPane();
 		this.baseLayout.setRight(this.getHealthLayout());
 		this.baseLayout.setLeft(this.getScoreLayout());
 		this.baseLayout.setCenter(this.getGameLayout());
 	}
 
-//Health
-	public Label getHealth() {
-		return this.health;
+	/**
+	 * Getter for base layout
+	 * @return  BorderPane of base layout
+	 */
+	public BorderPane getBaseLayout() {
+		return this.baseLayout;
 	}
 
-	public VBox getHealthLayout() {
-		return this.healthLayout;
-	}
+//Scene
 
-	public void setHealth() {
-		this.health.setFont(new Font("Helvetica Neut Bold", 15));
-	}
-
-	public void setHealthLayout() {
-		this.healthLayout.getChildren().add(this.getHealth());
-	}
-
-//Score
-	public Label getScore() {
-		return this.score;
-	}
-
-	public VBox getScoreLayout() {
-		return this.scoreLayout;
-	}
-
-	public void setScore() {
-		this.score.setFont(new Font("Helvetica Neut Bold", 15));
-	}
-
-	public void setScoreLayout(){
-		this.scoreLayout.getChildren().add(this.getScore());
-	}
-
-//Game Over
-	public Label getGameOver() {
-		return this.gameOver;
-	}
-
-	public void setGameOver(){
-		this.gameOver.setFont((new Font("Helvetica Neut Bold", 50)));
-	}
-
-	//Scene
-	public Scene getScene() {
-		return this.scene;
-	}
-	public void setScene() {
+	/**
+	 * Initializer for the scene of the game screen
+	 */
+	public void initScene() {
+		this.scene = new Scene(this.getBaseLayout());
 		this.keyController.keyEventHandler(avatar, this);
 		this.timeController.init(this, this.avatar);
 	}
 
+	/**
+	 * Getter for scene of game screen
+	 * @return  Scene of game screen
+	 */
+	public Scene getScene() {
+		return this.scene;
+	}
+
+	/**
+	 * When this method is called the game screen window will pop up and start the game
+	 */
+	public void display(){
+		this.window = new Stage();
+		this.initScene();
+		this.window.setScene(this.getScene());
+		this.window.show();
+		this.getTimeController().startTime();
+		this.getTimeController().stopTime();
+		this.getTimeController().startTime();
+		this.soundController.playMusic();
+	}
+
+
 //Images
+
+	/**
+	 * This method sets the avatar image into the game layout screen
+	 * to the center bottom of the screen
+	 */
 	public void setAvatarImage(){
 		avatar.getImage().setX(avatar.getLocation().getLocationX());
 		avatar.getImage().setY(avatar.getLocation().getLocationY());
 		this.getGameLayout().getChildren().add(avatar.getImage());
 	}
 
+	/**
+	 * This method creates and sets the Obstacle images of random numbers for one row.
+	 * It is generated offscreen of top of the game screen
+	 * And also stores object created to ArrayList typeClass
+	 * Also it will generate at least one Obstacle every time it is called
+	 */
 	public void setObstaclesImage(){
 		 this.maxObstacleAmount = rand.nextInt(column - 1) + 1;
 		 for (int i = 0; i < this.maxObstacleAmount;i++){
@@ -168,11 +282,17 @@ public class GameScreen implements Constants {
 			    spider.getImage().setY(((Location)this.locations.get(i)).getLocationY());
 			    spider.getImage().setCache(true);
 			    this.getGameLayout().getChildren().add(spider.getImage());
-			    this.typeClass.add(spider);
+			    this.getTypeClass().add(spider);
 		    }
 		 }
 	}
 
+	/**
+	 *This method creates and sets the Collectibles images of random numbers for one row.
+	 * It is generated offscreen of top of the game screen
+	 * And also stores object created to ArrayList typeClass
+	 * it is made sure that the
+	 */
 	public void setCollectiblesImage(){
 		int bound = column - this.maxObstacleAmount;
 		int maxCollectibleAmount = rand.nextInt(bound);
@@ -184,7 +304,7 @@ public class GameScreen implements Constants {
 				heart.getImage().setY(((Location)this.locations.get(i)).getLocationY());
 				heart.getImage().setCache(true);
 				this.getGameLayout().getChildren().add(heart.getImage());
-				this.typeClass.add(heart);
+				this.getTypeClass().add(heart);
 			}
 			else if (type == 1){
 				Collectible token = new Token();
@@ -234,26 +354,18 @@ public class GameScreen implements Constants {
 		return this.avatar;
 	}
 
-	public void display(){
-		this.window = new Stage();
-		this.setScene();
-		this.window.setScene(this.getScene());
-		this.window.show();
-		this.getTimeController().startTime();
-		this.getTimeController().stopTime();
-		this.getTimeController().startTime();
-		this.soundController.playMusic();
-	}
 
-	public Stage getWindow (){
-		return this.window;
-	}
 
-	public void setWindow(){
-
-	}
 
 	public SoundController getSoundController(){
 		return this.soundController;
+	}
+
+	/**
+	 * This returns the pause menu
+	 * @return The pause menu
+	 */
+	public PauseMenu getPauseMenu() {
+		return this.pauseMenu;
 	}
 }
