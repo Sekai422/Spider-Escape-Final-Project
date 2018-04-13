@@ -32,7 +32,7 @@ public class Collectible {
 	 * @return the value if objects overlap.
 	 */
 	public boolean overlapsWith(Avatar avatar) {
-		if (avatar.location.getLocationX() == this.location.getLocationX() && avatar.location.getLocationY() == this.location.getLocationY()) {
+		if (avatar.getLocation().getLocationX() == this.location.getLocationX() && avatar.getLocation().getLocationY() == this.location.getLocationY()) {
 			return true;
 		} else {
 			return false;
