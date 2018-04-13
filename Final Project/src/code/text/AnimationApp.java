@@ -5,12 +5,20 @@ import java.util.Collections;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * This Class is for running the Text based version of the game
+ *
+ * Since it is a text based game it will be a turn based game
+ */
 public class AnimationApp {
 
 	private Avatar avatar;
 	private ArrayList<Collectible> collectibles;
 	private ArrayList<Obstacle> obstacles;
 
+	/**
+	 * Initializer for the AnimationApp
+	 */
 	public void initialize() {
 		this.avatar = new Avatar();
 		this.obstacles = new ArrayList<>();
@@ -70,6 +78,9 @@ public class AnimationApp {
 		}
 	}
 
+	/**
+	 * Generates new Obstacles and Collectibles
+	 */
 	public void update(){
 		int maxX = 3;
 		int y = 4;
@@ -137,8 +148,10 @@ public class AnimationApp {
 	}
 
 
-
-		public void start(){
+	/**
+	 * Start method which starts the text version of the game
+	 */
+	public void start(){
 		initialize();
 
 		System.out.println("Welcome to Spider-Escape!");
@@ -227,11 +240,6 @@ public class AnimationApp {
 			}
 
 		}
-	}
-
-
-	public AnimationApp(){
-
 	}
 
 }
