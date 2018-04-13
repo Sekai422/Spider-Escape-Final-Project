@@ -7,8 +7,8 @@ import javafx.scene.image.ImageView;
  * Essentially when the avatar gets in contact with any Obstacles it will lose health
  */
 public class Obstacle {
-	Location location;
-	ImageView image;
+	private Location location;
+	private ImageView image;
 
 	/**
 	 * Getter for image of Obstacle
@@ -26,6 +26,6 @@ public class Obstacle {
 	public Location getLocation() {
 		return this.location;
 	}
-	
+
 }
 
