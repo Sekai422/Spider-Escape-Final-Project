@@ -22,4 +22,12 @@ public class Collectible {
 
 	//}
 
+	public boolean overlapsWith(Avatar avatar) {
+		if (avatar.location.getLocationX() == this.location.getLocationX() && avatar.location.getLocationY() == this.location.getLocationY()) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 }

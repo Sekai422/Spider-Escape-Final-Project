@@ -73,7 +73,6 @@ public class GameScreen implements Constants {
 		this.setAvatarImage();
 		this.getLocationController().shuffleLocations();
 		this.setBaseLayout();
-		this.setScene();
 	}
 
 //Game Layout
@@ -149,7 +148,6 @@ public class GameScreen implements Constants {
 		this.keyController.keyEventHandler(avatar, this);
 		this.timeController.init(this, this.avatar);
 		this.timeController.startTime();
-
 	}
 
 //Images
@@ -238,7 +236,8 @@ public class GameScreen implements Constants {
 
 	public void display(){
 		this.window = new Stage();
-		this.setWindow();
+		this.setScene();
+		this.window.setScene(this.getScene());
 		this.window.show();
 		this.getTimeController().startTime();
 	}
@@ -248,6 +247,6 @@ public class GameScreen implements Constants {
 	}
 
 	public void setWindow(){
-		this.window.setScene(this.getScene());
+
 	}
 }
